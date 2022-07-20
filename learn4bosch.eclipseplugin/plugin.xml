@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="learn4bosch.eclipseplugin.TestCategory"
+            name="Test category">
+      </category>
+      <view
+            allowMultiple="true"
+            category="learn4bosch.eclipseplugin.TestCategory"
+            class="learn4bosch.eclipseplugin.TestView"
+            icon="icons/Akali.png"
+            id="learn4bosch.eclipseplugin.TestView"
+            name="Test view"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:learn4bosch.eclipseplugin.TestView">
+         <command
+               commandId="learn4bosch.eclipseplugin.TestCommand"
+               icon="icons/Akali.png"
+               style="push">
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:learn4bosch.eclipseplugin.TestView">
+         <command
+               commandId="learn4bosch.eclipseplugin.TestCommand"
+               icon="icons/Akali.png"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="learn4bosch.eclipseplugin.TestHandler"
+            description="We say Mr.Dang is funny DM"
+            id="learn4bosch.eclipseplugin.TestCommand"
+            name="Test Command">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="learn4bosch.eclipseplugin.TestHandler"
+            commandId="learn4bosch.eclipseplugin.TestCommand">
+      </handler>
+   </extension>
+
+</plugin>

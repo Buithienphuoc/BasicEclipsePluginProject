@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="learn4bosch.swt.base.TestView"
+            icon="icons/2022-05-03_17h53_22.png"
+            id="learn4bosch.swt.base.TestView"
+            name="SWT Test view "
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>
